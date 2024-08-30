@@ -1,0 +1,43 @@
+<main class="wrapper">
+  <div class="container">
+    <p class="title">Welcome</p>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="input-container">
+        <label for="username-input">Username</label>
+        <input
+          formControlName="username"
+          id="username-input"
+          type="text"
+          required
+          (change)="inputChange()"
+        />
+      </div>
+      <div class="input-container">
+        <label for="password-input">Password</label>
+        <input
+          formControlName="password"
+          id="password-input"
+          type="password"
+          required
+          (change)="inputChange()"
+        />
+      </div>
+
+      <div
+        class="validation-error"
+        [ngClass]="{
+          'validation-error': username?.invalid || password?.invalid,
+          'hide': username?.valid && password?.valid,
+        }"
+      >
+        @if(incorrectCredentials){ Incorrect username or password } @else {Fill
+        out all form elements. }
+      </div>
+      <div class="button-container">
+        <button [disabled]="!loginForm.valid" type="submit">Log In</button>
+        <button alt class="signup" type="button">Sign Up</button>
+      </div>
+    </form>
+  </div>
+</main>
+<app-toast [userLoggedIn]="userLoggedIn"></app-toast>

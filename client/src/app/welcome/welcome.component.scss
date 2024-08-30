@@ -1,0 +1,39 @@
+p {
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  padding: 20px;
+}
+img {
+  border-radius: 10px;
+  height: 100px;
+  width: 100px;
+}
+
+.back-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(245, 245, 245);
+  border: none;
+  border-radius: 5px;
+  width: 35px;
+  height: 35px;
+  color: gray;
+  margin: 5px;
+  &:hover {
+    background-color: rgb(238, 238, 238);
+    color: rgb(85, 85, 85);
+    transition: all 150ms ease-in-out;
+    cursor: pointer;
+  }
+}
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.welcome {
+  font-size: 18px;
+}

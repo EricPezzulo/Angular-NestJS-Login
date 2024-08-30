@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="top">
+    <div class="header">
+      <button class="back-btn" routerLink="/">
+        <mat-icon>keyboard_arrow_left</mat-icon>
+      </button>
+      <p class="welcome">Welcome {{ user.username }}!</p>
+    </div>
+    <img
+      src="{{ user.profilePicture }}"
+      alt="{{ user.firstName }} {{ user.lastName }} profile picture "
+    />
+    <p>{{ user.firstName }} {{ user.lastName }}</p>
+  </div>
+</div>

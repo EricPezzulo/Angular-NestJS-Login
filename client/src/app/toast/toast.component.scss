@@ -1,0 +1,19 @@
+.toast {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: rgb(245, 245, 245);
+  border-radius: 5px;
+  border: 1px solid rgb(204, 204, 204);
+  box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  width: fit-content;
+  padding-inline: 10px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
